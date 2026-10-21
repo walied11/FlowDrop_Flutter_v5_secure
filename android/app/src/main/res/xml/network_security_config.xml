@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- يثق التطبيق بشهادات النظام فقط (لا شهادات مثبتة من المستخدم)،
+     فلا تستطيع أدوات الاعتراض المثبّتة كشهادة فك تشفير HTTPS. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+</network-security-config>
